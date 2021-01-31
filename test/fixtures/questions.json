@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "question": "Pregunta 1",
+    "options": ["Opcion 1", "Opcion 2", "Opcion 3", "Opcion 4"],
+    "answer": 0
+  },
+  {
+    "id": 2,
+    "question": "Pregunta 2",
+    "options": ["Opcion 1", "Opcion 2", "Opcion 3", "Opcion 4"],
+    "answer": 1
+  }
+]
