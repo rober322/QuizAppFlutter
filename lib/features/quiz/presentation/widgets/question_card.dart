@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 
 import 'option.dart';
 import '../../../../constants.dart';
-import '../../../../controllers/question_controller.dart';
+import '../../../../features/quiz/presentation/controllers/question_controller.dart';
 import '../../../../features/quiz/domain/entities/question.dart';
 
 class QuestionCard extends StatelessWidget {

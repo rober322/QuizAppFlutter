@@ -3,7 +3,7 @@ import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
 import '../../../../constants.dart';
-import '../../../../controllers/question_controller.dart';
+import '../../../../features/quiz/presentation/controllers/question_controller.dart';
 
 class ProgressBar extends StatelessWidget {
   const ProgressBar({

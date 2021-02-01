@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'question_card.dart';
-import '../../../../controllers/question_controller.dart'; 
+import '../../../../features/quiz/presentation/controllers/question_controller.dart';
 
 class QuizControls extends StatelessWidget {
   const QuizControls({Key key}) : super(key: key);

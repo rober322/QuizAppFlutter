@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../constants.dart';
-import '../../../../controllers/question_controller.dart';
+import '../../../../features/quiz/presentation/controllers/question_controller.dart';
 
 class TitleQuiz extends StatelessWidget {
   const TitleQuiz({Key key, @required this.name}) : super(key: key);

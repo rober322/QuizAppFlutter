@@ -6,7 +6,7 @@ import '../../../../core/widgets/fondo_svg.dart';
 import '../../../../features/quiz/presentation/widgets/progress_bar.dart';
 import '../../../../features/quiz/presentation/widgets/quiz_controls.dart';
 import '../../../../features/quiz/presentation/widgets/title_quiz.dart';
-import '../../../../controllers/question_controller.dart';
+import '../../../../features/quiz/presentation/controllers/question_controller.dart';
 
 class QuizPage extends StatelessWidget {
   @override

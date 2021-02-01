@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
-import '../models/questions2.dart';
-import '../features/quiz/domain/entities/question.dart';
+import 'package:quiz_app/models/questions2.dart';
+import 'package:quiz_app/features/quiz/domain/entities/question.dart';
 
 class QuestionController extends GetxController
     with SingleGetTickerProviderMixin {

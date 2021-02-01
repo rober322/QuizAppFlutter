@@ -8,8 +8,6 @@ import '../../domain/entities/question.dart';
 import '../../domain/repositories/question_repository.dart';
 import '../datasources/question_remote_data_source.dart';
 
-// typedef Future<QuestionsList> _QuestionChooser();
-
 class QuestionRepositoryImpl implements QuestionRepository {
   final QuestionRemoteDataSource remoteDataSource;
   final NetworkInfo networkInfo;
@@ -31,14 +29,5 @@ class QuestionRepositoryImpl implements QuestionRepository {
     } else {
       return Left(IsNotOnlineFailure());
     }
-    // return await _getQuestionsList(() {
-    //   return remoteDataSource.getQuestions();
-    // });
   }
-
-  // Future<Either<Failure, QuestionsList>> _getQuestionsList(
-  //   _QuestionChooser getQuestions,
-  // ) async {
-    
-  // }
 }

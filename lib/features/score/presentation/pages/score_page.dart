@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 
 import '../../../../constants.dart';
 import '../../../../core/widgets/fondo_svg.dart';
-import '../../../../controllers/question_controller.dart';
+import '../../../../features/quiz/presentation/controllers/question_controller.dart';
 
 class ScorePage extends StatelessWidget {
   @override

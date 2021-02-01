@@ -1,6 +1,5 @@
 part of 'welcome_bloc.dart';
 
-@immutable
 abstract class WelcomeState extends Equatable {
   const WelcomeState();
   

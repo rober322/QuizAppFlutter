@@ -19,8 +19,8 @@ void main() {
     usecase = GetQuestions(mockQuestionRepository);
   });
 
-  final tQuestion1 = Question(id: 1, question: "Pregunta 1", answer: 1, options: ["uno", "dos", "tres", "cuatro"]);
-  final tQuestion2 = Question(id: 1, question: "Pregunta 1", answer: 1, options: ["uno", "dos", "tres", "cuatro"]);
+  final tQuestion1 = Question(id: 1, question: "Pregunta 1", answer: 0, options: ["uno", "dos", "tres", "cuatro"]);
+  final tQuestion2 = Question(id: 2, question: "Pregunta 2", answer: 1, options: ["uno", "dos", "tres", "cuatro"]);
   final tQuestionlist = List<Question>();
   tQuestionlist.add(tQuestion1);
   tQuestionlist.add(tQuestion2);

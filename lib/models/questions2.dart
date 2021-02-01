@@ -1,10 +1,3 @@
-// class Question2 {
-//   final int id, answer;
-//   final String question;
-//   final List<String> options;
-
-//   Question2({this.id, this.question, this.answer, this.options});
-// }
 
 const List sample_data = [
   {
