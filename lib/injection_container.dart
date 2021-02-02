@@ -8,6 +8,7 @@ import 'features/quiz/data/datasources/question_remote_data_source.dart';
 import 'features/quiz/data/repositories/question_repository_impl.dart';
 import 'features/quiz/domain/repositories/question_repository.dart';
 import 'features/quiz/domain/usecases/get_questions.dart';
+import 'features/quiz/presentation/bloc/quiz_bloc.dart';
 import 'features/welcome/presentation/bloc/welcome_bloc.dart';
 
 final sl = GetIt.instance; //sl (localizador de servicios).
@@ -15,11 +16,8 @@ final sl = GetIt.instance; //sl (localizador de servicios).
 Future<void> init() async {
   //! Features - Number Trivia
   //Bloc
-  sl.registerFactory(
-    () => WelcomeBloc(
-      inputValidation: sl(),
-    ),
-  );
+  sl.registerFactory(() => WelcomeBloc(inputValidation: sl()));
+  sl.registerFactory(() => QuizBloc(questions: sl()));
   // Use cases
   sl.registerLazySingleton(() => GetQuestions(sl()));
   // Repository

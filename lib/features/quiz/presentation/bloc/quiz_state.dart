@@ -7,7 +7,6 @@ abstract class QuizState extends Equatable {
   List<Object> get props => [];
 }
 
-class QuizInitial extends QuizState {}
 class Empty extends QuizState{}
 
 class Loading extends QuizState{}

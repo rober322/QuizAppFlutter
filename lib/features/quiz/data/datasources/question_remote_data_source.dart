@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
+import 'package:quiz_app/core/util/json_util.dart';
 
 import '../models/question_model.dart';
 import '../../../../core/error/exception.dart';
@@ -25,7 +26,7 @@ class QuestionRemoteDataSourceImpl implements QuestionRemoteDataSource {
     );
 
     if (response.statusCode == 200) {
-      return QuestionsListModel.fromJson(json.decode(response.body));
+      return QuestionsListModel.fromJson(jsonDecodeUtf8(response.bodyBytes));
     } else {
       throw ServerException();
     }

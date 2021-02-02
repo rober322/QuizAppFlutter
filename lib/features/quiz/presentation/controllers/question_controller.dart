@@ -1,14 +1,12 @@
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
-import 'package:quiz_app/models/questions2.dart';
 import 'package:quiz_app/features/quiz/domain/entities/question.dart';
 
 class QuestionController extends GetxController
     with SingleGetTickerProviderMixin {
-  QuestionController({this.context});
-
   BuildContext context;
+  List<Question> questions = [];
 
   AnimationController _animationController;
   Animation _animation;
@@ -16,17 +14,6 @@ class QuestionController extends GetxController
 
   PageController _pageController;
   PageController get pageController => this._pageController;
-
-  List<Question> _questions = sample_data
-      .map(
-        (question) => Question(
-            id: question['id'],
-            question: question['question'],
-            options: question['options'],
-            answer: question['answer_index']),
-      )
-      .toList();
-  List<Question> get questions => this._questions;
 
   bool _isAnswered = false;
   bool get isAnswered => this._isAnswered;
@@ -85,10 +72,10 @@ class QuestionController extends GetxController
   }
 
   void nextQuestion() {
-    if (_questionNumber.value != _questions.length) {
+    if (_questionNumber.value != questions.length) {
       _isAnswered = false;
       _pageController.nextPage(
-        duration: Duration(milliseconds: 250), curve: Curves.ease);
+          duration: Duration(milliseconds: 250), curve: Curves.ease);
       _animationController.reset();
       _animationController.forward().whenComplete(nextQuestion);
     } else {

@@ -21,7 +21,7 @@ class QuizBloc extends Bloc<QuizEvent, QuizState> {
   QuizBloc({
     @required GetQuestions questions,
   })  : assert(questions != null),
-        getQuestions = questions, super(QuizInitial());
+        getQuestions = questions, super(Empty());
 
   QuizState get initialState => Empty();
 
