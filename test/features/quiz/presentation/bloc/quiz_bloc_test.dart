@@ -22,9 +22,9 @@ void main() {
     );
   });
 
-  test('initialState should be Empty', () {
+  test('initialState should be Loading', () {
     // assert
-    expect(bloc.initialState, equals(Empty()));
+    expect(bloc.initialState, equals(Loading()));
   });
 
   group('GetQuestions', () {
@@ -50,13 +50,13 @@ void main() {
     );
 
     test(
-      'should emit [Loading, Loaded] when data is gotten successfully',
+      'should emit [Loaded] when data is gotten successfully',
       () async {
         // arrange
         when(mockGetQuestions(any))
             .thenAnswer((_) async => Right(tQuestionlistFull));
         // assert later
-        final expected = [Loading(), Loaded(questions: tQuestionlistFull)];
+        final expected = [Loaded(questions: tQuestionlistFull)];
         expectLater(bloc, emitsInOrder(expected));
         // act
         bloc.add(GetQuestionsEvent());
@@ -64,13 +64,13 @@ void main() {
     );
 
     test(
-      'should emit [Loading, Error] when getting data fails',
+      'should emit [Error] when getting data fails',
       () async {
         // arrange
         when(mockGetQuestions(any))
             .thenAnswer((_) async => Left(ServerFailure()));
         // assert later
-        final expected = [Loading(), Error(message: SERVER_FAILURE_MESSAGE)];
+        final expected = [Error(message: SERVER_FAILURE_MESSAGE)];
         expectLater(bloc, emitsInOrder(expected));
         // act
         bloc.add(GetQuestionsEvent());

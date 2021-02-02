@@ -21,16 +21,15 @@ class QuizBloc extends Bloc<QuizEvent, QuizState> {
   QuizBloc({
     @required GetQuestions questions,
   })  : assert(questions != null),
-        getQuestions = questions, super(Empty());
+        getQuestions = questions, super(Loading());
 
-  QuizState get initialState => Empty();
+  QuizState get initialState => Loading();
 
   @override
   Stream<QuizState> mapEventToState(
     QuizEvent event,
   ) async* {
     if (event is GetQuestionsEvent) {
-      yield Loading();
       final failureOrQuestions = await getQuestions(NoParams());
       yield* _eitherLoadedOrErrorState(failureOrQuestions);
     }

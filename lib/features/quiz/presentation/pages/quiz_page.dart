@@ -42,12 +42,9 @@ class QuizPage extends StatelessWidget {
         BlocBuilder<QuizBloc, QuizState>(
           // ignore: missing_return
           builder: (context, state) {
-            if (state is Empty || state == null) {
-              print('Iniciando!');
-              return LoadingQuestionsWidget();
-            } else if (state is Loading) {
+            if (state is Loading || state == null) {
               print('Cargando!');
-              return Text('');
+              return LoadingQuestionsWidget();
             } else if (state is Loaded) {
               print('Success');
               return QuizControls(name, state.questions);
